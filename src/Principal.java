@@ -7,7 +7,6 @@ public class Principal {
 		Main nova = new Main();
 		Stage primary = new Stage();
 		nova.start(primary);
-
+		System.out.println("hahaha");
 	}
-
 }
