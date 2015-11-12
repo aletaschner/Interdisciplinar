@@ -16,7 +16,7 @@ public class UsuarioDAO implements IAbstractDao<Usuario> {
 	private String sql;
 
 	public UsuarioDAO() throws SQLException {
-		conn = new ConectaSqlite().getConnection();
+		conn = new ConectaMYSQL().getConnection();
 	}
 
 	@Override
