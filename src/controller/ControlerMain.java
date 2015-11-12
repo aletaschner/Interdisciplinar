@@ -20,11 +20,24 @@ public class ControlerMain implements Initializable{
 		this.main = main;
 	}
 
-
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
+	}
+	public void initCadCliente(){
+		main.initCadCliente();
+	}
+
+	public void initCadQuarto(){
+		main.initCadQuarto();
+	}
+
+	public void initCadReserva(){
+		main.initCadReserva();
+	}
+
+	public void initListaReservas(){
+		main.initListaReservas();
 	}
 
 

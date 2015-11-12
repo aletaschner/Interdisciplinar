@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadReserva">
+   <children>
+      <Label layoutX="14.0" layoutY="5.0" prefHeight="50.0" prefWidth="253.0" text="Cadastro de Reserva">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="22.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Salvar" />
+      <Button layoutX="116.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+      <TabPane layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="769.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Reserva">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="769.0">
+                     <children>
+                        <TextArea layoutX="7.0" layoutY="205.0" prefHeight="50.0" prefWidth="756.0" />
+                        <Label layoutX="8.0" layoutY="178.0" text="Observação:" />
+                        <TextField layoutX="7.0" layoutY="145.0" prefHeight="25.0" prefWidth="756.0" />
+                        <Label layoutX="7.0" layoutY="122.0" text="Quarto:" />
+                        <Label layoutX="382.0" layoutY="62.0" text="Data Saída" />
+                        <Label layoutX="7.0" layoutY="62.0" text="Data Entrada:" />
+                        <TextField layoutX="7.0" layoutY="33.0" prefHeight="25.0" prefWidth="756.0" />
+                        <Label layoutX="7.0" layoutY="14.0" text="Cliente:" />
+                        <DatePicker layoutX="8.0" layoutY="86.0" prefHeight="25.0" prefWidth="368.0" />
+                        <DatePicker layoutX="382.0" layoutY="86.0" prefHeight="25.0" prefWidth="380.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Pagamento">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="13.0" layoutY="14.0" prefHeight="17.0" prefWidth="64.0" text="Método:" />
+                        <Label layoutX="14.0" layoutY="187.0" prefHeight="17.0" prefWidth="89.0" text="Valor Desconto:" />
+                        <Label layoutX="117.0" layoutY="187.0" text="Motivo Desconto:" />
+                        <ComboBox layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="751.0" />
+                        <RadioButton layoutX="14.0" layoutY="104.0" mnemonicParsing="false" text="Sim" />
+                        <RadioButton layoutX="64.0" layoutY="104.0" mnemonicParsing="false" text="Não" />
+                        <Label layoutX="13.0" layoutY="78.0" prefHeight="17.0" prefWidth="89.0" text="Parcelamento:" />
+                        <Label layoutX="14.0" layoutY="134.0" prefHeight="17.0" prefWidth="137.0" text="Quantidade Parcelas:" />
+                        <ComboBox layoutX="14.0" layoutY="158.0" prefHeight="25.0" prefWidth="751.0" />
+                        <TextField layoutX="15.0" layoutY="213.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField layoutX="117.0" layoutY="213.0" prefHeight="25.0" prefWidth="649.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Region layoutX="21.0" layoutY="362.0" prefHeight="83.0" prefWidth="759.0" style="-fx-border-color: green; -fx-border-style: dashed; -fx-border-width: 3px; -fx-background-color: #FFF;" />
+      <Label layoutX="378.0" layoutY="369.0" text="Valor:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="268.0" layoutY="396.0" prefHeight="37.0" prefWidth="261.0" />
+   </children>
+</Pane>

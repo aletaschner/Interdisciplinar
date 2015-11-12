@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerListaReservas">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="231.0" text="Reservas">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="16.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+      <TableView layoutX="14.0" layoutY="64.0" prefHeight="346.0" prefWidth="779.0">
+        <columns>
+          <TableColumn prefWidth="49.0" text="Código" />
+          <TableColumn prefWidth="130.0" text="Cliente" />
+            <TableColumn prefWidth="90.0" text="Entrada" />
+            <TableColumn prefWidth="102.0" text="Saída" />
+            <TableColumn prefWidth="135.0" text="Quarto" />
+            <TableColumn prefWidth="66.0" text="Hospedes" />
+            <TableColumn prefWidth="140.0" text="Status Pgto" />
+            <TableColumn prefWidth="64.0" text="Valor" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
