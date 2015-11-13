@@ -40,5 +40,13 @@ public class ControlerMain implements Initializable{
 		main.initListaReservas();
 	}
 
+	public void initListaClientes(){
+		main.initListaClientes();
+	}
+
+	public void initListaQuartos(){
+		main.initListaQuartos();
+	}
+
 
 }

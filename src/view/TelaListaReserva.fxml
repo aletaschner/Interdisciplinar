@@ -13,16 +13,16 @@
          </font>
       </Label>
       <Button layoutX="16.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
-      <TableView layoutX="14.0" layoutY="64.0" prefHeight="346.0" prefWidth="779.0">
+      <TableView layoutX="14.0" layoutY="64.0" prefHeight="346.0" prefWidth="779.0" fx:id="ListaReservas">
         <columns>
-          <TableColumn prefWidth="49.0" text="Código" />
-          <TableColumn prefWidth="130.0" text="Cliente" />
-            <TableColumn prefWidth="90.0" text="Entrada" />
-            <TableColumn prefWidth="102.0" text="Saída" />
-            <TableColumn prefWidth="135.0" text="Quarto" />
-            <TableColumn prefWidth="66.0" text="Hospedes" />
-            <TableColumn prefWidth="140.0" text="Status Pgto" />
-            <TableColumn prefWidth="64.0" text="Valor" />
+          <TableColumn prefWidth="49.0" text="Código" fx:id="Codigo" />
+          <TableColumn prefWidth="130.0" text="Cliente" fx:id="Cliente" />
+            <TableColumn prefWidth="90.0" text="Entrada" fx:id="Entrada"/>
+            <TableColumn prefWidth="102.0" text="Saída" fx:id="Saida" />
+            <TableColumn prefWidth="135.0" text="Quarto" fx:id="Quarto" />
+            <TableColumn prefWidth="66.0" text="Hospedes"  fx:id="Hospedes"/>
+            <TableColumn prefWidth="140.0" text="Status Pgto" fx:id="StatusPgto" />
+            <TableColumn prefWidth="64.0" text="Valor" fx:id="Valor"/>
         </columns>
       </TableView>
    </children>

@@ -144,7 +144,53 @@ public class Main extends Application {
 		}
 	}
 
+	public void initListaClientes() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("TelaListaCliente.fxml"));
+			Pane tela = (Pane) loader.load();
 
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Lista de Clientes");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerListaClientes CCad = loader.getController();
+			CCad.setMain(this);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void initListaQuartos() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("TelaListaQuarto.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Lista de Quartos");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerListaQuartos CCad = loader.getController();
+			CCad.setMain(this);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public Stage getPrimaryStage() {
 		return primaryStage;
