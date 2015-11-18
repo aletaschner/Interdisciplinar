@@ -4,13 +4,16 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import view.*;
+import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.SelectionModel;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -29,6 +32,8 @@ public class ControllerListaReservas implements Initializable{
 	TableView<TabListaReserva> ListaReservas;
 	@FXML
 	TextField Total;
+	@FXML
+	Button btnConfirmar, btnEditar, btnExcluir;
 
 	public void setMain(Main m){
 		this.Main  = m;
@@ -57,8 +62,21 @@ public class ControllerListaReservas implements Initializable{
 				Total.setText(Integer.toString(ListaReservas.getItems().size()));
 			}
 		});
+
 	}
 
+	public void botoesCtrl(){
+		int item = ListaReservas.getSelectionModel().getSelectedIndex();
 
+		if(item != -1){
+			btnConfirmar.setDisable(false);
+			btnEditar.setDisable(false);
+			btnExcluir.setDisable(false);
+		}else{
+			btnConfirmar.setDisable(true);
+			btnEditar.setDisable(true);
+			btnExcluir.setDisable(true);
+		}
 
+	}
 }

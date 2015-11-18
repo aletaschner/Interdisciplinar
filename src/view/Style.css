@@ -1,0 +1,41 @@
+.btnDeletar {
+-fx-background-color:linear-gradient(to bottom, #D9534F 0px, #C12E2A 100%);
+-fx-background-repeat: repeat-x;
+-fx-border-color: #B92C28;
+-fx-text-fill: #FFF;
+-fx-border-radius:4px;
+}
+.btnDeletar:hover {
+ -fx-background-color: #c9302c;
+  
+ -fx-border-color: #ac2925;
+}
+.btnEditar {
+-fx-background-color:linear-gradient(to bottom, #5BC0DE 0px, #2AABD2 100%);
+-fx-background-repeat: repeat-x;
+-fx-border-color: #28A4C9;
+-fx-text-fill: #FFF;
+-fx-border-radius:4px;
+}
+.btnEditar:hover {
+  -fx-background-color: #31b0d5;
+
+  -fx-border-color: #269abc;
+}
+.btnConfirmar {
+-fx-background-color: linear-gradient(to bottom, #5CB85C 0px, #419641 100%);
+-fx-background-repeat: repeat-x;
+-fx-border-color: #3E8F3E;
+-fx-text-fill: #FFF;
+-fx-border-radius:4px;
+}
+.fundo {
+-fx-background-color: linear-gradient(#feffff 0%,#d2ebf9 100%);
+-fx-background-repeat: repeat-x;
+-fx-border-color: #3E8F3E;
+}
+.btnConfirmar:hover {
+  -fx-background-color: #449d44;
+
+  -fx-border-color: #398439;
+}
