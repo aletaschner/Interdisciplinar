@@ -8,7 +8,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControlerMain">
+<VBox prefHeight="700.0" prefWidth="1200.0" stylesheets="@Principal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControlerMain">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -16,7 +16,7 @@
           <items>
                   <SeparatorMenuItem mnemonicParsing="false" text="Reservas" />
             <MenuItem mnemonicParsing="false" text="Listar" />
-            <MenuItem mnemonicParsing="false" text="Cadastrar" />
+            <MenuItem mnemonicParsing="false" style="-fx-background-image:url(calendar-128.png);" text="Cadastrar" />
                   <MenuItem mnemonicParsing="false" text="Confirmar" />
             <SeparatorMenuItem mnemonicParsing="false" text="Clientes" />
             <MenuItem mnemonicParsing="false" text="Listar" />
@@ -41,9 +41,9 @@
             <Pane layoutX="4.0" layoutY="4.0" prefHeight="100.0" prefWidth="1194.0" style="-fx-border-color: #000; -fx-background-color: #FFF;">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff0e" height="100.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="313.0" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaReservas" prefHeight="66.0" prefWidth="91.0" text="Listar" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadReserva" prefHeight="66.0" prefWidth="91.0" text="Cadastrar" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" text="Confirmar" />
+                  <Button fx:id="BtnListaReserva" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaReservas" prefHeight="66.0" prefWidth="91.0" styleClass="btnListaReserva" text="Listar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadReserva" prefHeight="66.0" prefWidth="91.0" styleClass="btnCadReserva" text="Cadastrar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="208.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" styleClass="btnConfReserva" text="Confirmar" />
                   <Label layoutX="14.0" layoutY="6.0" text="RESERVAS">
                      <font>
                         <Font name="SansSerif Bold" size="12.0" />
@@ -55,24 +55,24 @@
                         <Font name="SansSerif Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaClientes" prefHeight="66.0" prefWidth="91.0" text="Listar" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="424.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadCliente" prefHeight="66.0" prefWidth="91.0" text="Cadastrar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaClientes" prefHeight="66.0" prefWidth="91.0" styleClass="btnListaCliente" text="Listar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="424.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadCliente" prefHeight="66.0" prefWidth="91.0" styleClass="btnCadCliente" text="Cadastrar" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#080a9a42" height="100.0" layoutX="529.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
                   <Label layoutX="542.0" layoutY="9.0" text="QUARTOS">
                      <font>
                         <Font name="SansSerif Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="542.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaQuartos" prefHeight="66.0" prefWidth="91.0" text="Listar" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="639.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadQuarto" prefHeight="66.0" prefWidth="91.0" text="Cadastrar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="542.0" layoutY="26.0" mnemonicParsing="false" onAction="#initListaQuartos" prefHeight="66.0" prefWidth="91.0" styleClass="btnListaQuarto" text="Listar" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="639.0" layoutY="26.0" mnemonicParsing="false" onAction="#initCadQuarto" prefHeight="66.0" prefWidth="91.0" styleClass="btnCadQuarto" text="Cadastrar" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6b005242" height="100.0" layoutX="740.0" stroke="BLACK" strokeType="INSIDE" width="213.0" />
                   <Label layoutX="753.0" layoutY="9.0" text="GERENCIAL">
                      <font>
                         <Font name="SansSerif Bold" size="12.0" />
                      </font>
                   </Label>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="753.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" text="Financeiro" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="850.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" text="Relatórios" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="753.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" styleClass="btnFinanceiro" text="Financeiro" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="850.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="91.0" styleClass="btnGrafico" text="Relatórios" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" height="82.0" layoutX="958.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="114.0">
                      <fill>
                         <LinearGradient endY="0.9619047619047619">
@@ -84,7 +84,7 @@
                      </fill>
                   </Rectangle>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cc5c0064" height="100.0" layoutX="1074.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="1084.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="99.0" text="Configurações" />
+                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="1084.0" layoutY="26.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="99.0" styleClass="btnConfiguracoes" text="Configurações" />
                   <Label layoutX="1084.0" layoutY="9.0" text="CONFIGURAÇÕES">
                      <font>
                         <Font name="SansSerif Bold" size="12.0" />

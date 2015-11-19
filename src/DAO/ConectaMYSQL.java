@@ -10,7 +10,6 @@ public class ConectaMYSQL implements FactoryDataBase {
 	public Connection getConnection() throws SQLException  {
 
 		DriverManager.registerDriver(new org.sqlite.JDBC());
-		String url = "jdbc:sqlite:C:\\Users\\Diego\\Downloads\\ExemploFX\\ExemploFX\\DB\\DataBase.db";
 
 		return DriverManager.getConnection(url);
 	}

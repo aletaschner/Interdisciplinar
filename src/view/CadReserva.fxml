@@ -14,7 +14,7 @@
       </Label>
       <Button layoutX="22.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Salvar" />
       <Button layoutX="116.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
-      <TabPane layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="769.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="769.0" style="-fx-border-color: #CCC;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab text="Reserva">
             <content>

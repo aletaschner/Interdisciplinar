@@ -1,0 +1,60 @@
+.btnListaReserva {
+-fx-background-image: url('calendar.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnCadReserva {
+-fx-background-image: url('cadReserva.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnConfReserva {
+-fx-background-image: url('confReserva.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnListaCliente {
+-fx-background-image: url('clientes.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnCadCliente {
+-fx-background-image: url('cadCliente.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnListaQuarto {
+-fx-background-image: url('quartos.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnCadQuarto {
+-fx-background-image: url('cadQuarto.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnFinanceiro {
+-fx-background-image: url('financeiro.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnConfiguracoes {
+-fx-background-image: url('configuracoes.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
+.btnGrafico {
+-fx-background-image: url('graph.png');
+-fx-background-repeat: no-repeat;
+-fx-background-position: center top;
+-fx-background-color: transparent;
+}
