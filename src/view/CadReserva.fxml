@@ -20,16 +20,16 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="769.0">
                      <children>
-                        <TextArea layoutX="7.0" layoutY="205.0" prefHeight="50.0" prefWidth="756.0" />
+                        <TextArea fx:id="Observacao" layoutX="7.0" layoutY="205.0" prefHeight="50.0" prefWidth="756.0" />
                         <Label layoutX="8.0" layoutY="178.0" text="Observação:" />
-                        <TextField layoutX="7.0" layoutY="145.0" prefHeight="25.0" prefWidth="756.0" />
+                        <TextField fx:id="Quarto" layoutX="7.0" layoutY="145.0" prefHeight="25.0" prefWidth="756.0" />
                         <Label layoutX="7.0" layoutY="122.0" text="Quarto:" />
                         <Label layoutX="382.0" layoutY="62.0" text="Data Saída" />
                         <Label layoutX="7.0" layoutY="62.0" text="Data Entrada:" />
-                        <TextField layoutX="7.0" layoutY="33.0" prefHeight="25.0" prefWidth="756.0" />
+                        <TextField fx:id="Cliente" layoutX="7.0" layoutY="33.0" prefHeight="25.0" prefWidth="756.0" />
                         <Label layoutX="7.0" layoutY="14.0" text="Cliente:" />
-                        <DatePicker layoutX="8.0" layoutY="86.0" prefHeight="25.0" prefWidth="368.0" />
-                        <DatePicker layoutX="382.0" layoutY="86.0" prefHeight="25.0" prefWidth="380.0" />
+                        <DatePicker fx:id="DataEntrada" layoutX="8.0" layoutY="86.0" prefHeight="25.0" prefWidth="368.0" />
+                        <DatePicker fx:id="DataSaida" layoutX="382.0" layoutY="86.0" prefHeight="25.0" prefWidth="380.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -41,14 +41,14 @@
                         <Label layoutX="13.0" layoutY="14.0" prefHeight="17.0" prefWidth="64.0" text="Método:" />
                         <Label layoutX="14.0" layoutY="187.0" prefHeight="17.0" prefWidth="89.0" text="Valor Desconto:" />
                         <Label layoutX="117.0" layoutY="187.0" text="Motivo Desconto:" />
-                        <ComboBox layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="751.0" />
+                        <ComboBox fx:id="Metodo" layoutX="15.0" layoutY="40.0" prefHeight="25.0" prefWidth="751.0" />
                         <RadioButton layoutX="14.0" layoutY="104.0" mnemonicParsing="false" text="Sim" />
                         <RadioButton layoutX="64.0" layoutY="104.0" mnemonicParsing="false" text="Não" />
                         <Label layoutX="13.0" layoutY="78.0" prefHeight="17.0" prefWidth="89.0" text="Parcelamento:" />
                         <Label layoutX="14.0" layoutY="134.0" prefHeight="17.0" prefWidth="137.0" text="Quantidade Parcelas:" />
-                        <ComboBox layoutX="14.0" layoutY="158.0" prefHeight="25.0" prefWidth="751.0" />
-                        <TextField layoutX="15.0" layoutY="213.0" prefHeight="25.0" prefWidth="99.0" />
-                        <TextField layoutX="117.0" layoutY="213.0" prefHeight="25.0" prefWidth="649.0" />
+                        <ComboBox fx:id="QtdParcelas" layoutX="14.0" layoutY="158.0" prefHeight="25.0" prefWidth="751.0" />
+                        <TextField fx:id="Desconto" layoutX="15.0" layoutY="213.0" prefHeight="25.0" prefWidth="99.0" />
+                        <TextField fx:id="Motivo" layoutX="117.0" layoutY="213.0" prefHeight="25.0" prefWidth="649.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -61,6 +61,6 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="268.0" layoutY="396.0" prefHeight="37.0" prefWidth="261.0" />
+      <TextField fx:id="Valor" layoutX="268.0" layoutY="396.0" prefHeight="37.0" prefWidth="261.0" />
    </children>
 </Pane>

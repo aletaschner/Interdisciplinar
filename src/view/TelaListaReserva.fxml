@@ -27,7 +27,7 @@
       </TableView>
       <TextField fx:id="Total" layoutX="731.0" layoutY="33.0" prefHeight="25.0" prefWidth="55.0" />
       <Region layoutX="489.0" layoutY="435.0" prefHeight="43.0" prefWidth="305.0" style="-fx-border-color: #000;" />
-      <Button fx:id="BtnEditar" disable="true" layoutX="597.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
+      <Button fx:id="BtnEditar" disable="true" layoutX="597.0" layoutY="438.0" mnemonicParsing="false" onAction="#Editar" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
       <Button fx:id="BtnExcluir" disable="true" layoutX="697.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
       <Button fx:id="BtnConfirmar" disable="true" layoutX="497.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Confirmar" />
    </children>

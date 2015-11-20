@@ -192,6 +192,32 @@ public class Main extends Application {
 		}
 	}
 
+	// Aqui começam polimorfismos
+	public void initCadReserva(int Codigo) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("CadReserva.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Cadastro de Reserva");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerCadReserva CCad = loader.getController();
+			CCad.CarregaReserva(Codigo);
+			CCad.setMain(this);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	public Stage getPrimaryStage() {
 		return primaryStage;
 	}

@@ -17,7 +17,7 @@ import javafx.scene.control.SelectionModel;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import model.TabListaReserva;
+import model.*;
 
 public class ControllerListaReservas implements Initializable{
 
@@ -33,7 +33,7 @@ public class ControllerListaReservas implements Initializable{
 	@FXML
 	TextField Total;
 	@FXML
-	Button btnConfirmar, btnEditar, btnExcluir;
+	Button BtnConfirmar, BtnEditar, BtnExcluir;
 
 	public void setMain(Main m){
 		this.Main  = m;
@@ -66,17 +66,23 @@ public class ControllerListaReservas implements Initializable{
 	}
 
 	public void botoesCtrl(){
-		int item = ListaReservas.getSelectionModel().getSelectedIndex();
+		int item = ListaReservas.getSelectionModel().getSelectedCells().size();
 
-		if(item != -1){
-			btnConfirmar.setDisable(false);
-			btnEditar.setDisable(false);
-			btnExcluir.setDisable(false);
+		if(item > 0){
+			BtnConfirmar.setDisable(false);
+			BtnEditar.setDisable(false);
+			BtnExcluir.setDisable(false);
 		}else{
-			btnConfirmar.setDisable(true);
-			btnEditar.setDisable(true);
-			btnExcluir.setDisable(true);
+			BtnConfirmar.setDisable(true);
+			BtnEditar.setDisable(true);
+			BtnExcluir.setDisable(true);
 		}
 
+	}
+
+	public void Editar(){
+		int selectedIndex = ListaReservas.getSelectionModel().getSelectedIndex();
+		int IdSelecionado = ListaReservas.getItems().get(selectedIndex).getCodigoInt();
+		Main.initCadReserva(IdSelecionado);
 	}
 }
