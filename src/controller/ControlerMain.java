@@ -53,5 +53,7 @@ public class ControlerMain implements Initializable{
 		main.initListaQuartos();
 	}
 
-
+	public void initFinanceiro(){
+		main.initFinanceiro();
+	}
 }

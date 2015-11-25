@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerFinanceiro">
+   <children>
+      <GridPane hgap="20.0" layoutX="11.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="780.0">
+         <children>
+            <TableView fx:id="ListaEntradas" onMouseClicked="#entradaBotoes" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="CodigoEntrada" prefWidth="75.0" text="Codigo" />
+                  <TableColumn fx:id="MotivoEntrada" prefWidth="245.0" text="Motivo" />
+                  <TableColumn fx:id="ValorEntrada" prefWidth="59.0" text="Valor" />
+               </columns>
+            </TableView>
+            <TableView fx:id="ListaSaidas" onMouseClicked="#saidaBotoes" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="CodigoSaida" prefWidth="75.0" text="Codigo" />
+                  <TableColumn fx:id="MotivoSaida" prefWidth="248.0" text="Motivo" />
+                  <TableColumn fx:id="ValorSaida" prefWidth="56.0" text="Valor" />
+               </columns>
+            </TableView>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="TotalEntradas" layoutX="312.0" layoutY="13.0" prefHeight="25.0" prefWidth="67.0" />
+                  <Label layoutX="277.0" layoutY="17.0" text="Total:" />
+                  <Button fx:id="BtnEdEntrada" disable="true" layoutX="92.0" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
+                  <Button fx:id="BtnExcEntrada" disable="true" layoutX="184.0" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
+                  <Button fx:id="BtnCadEntrada" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="TotalSaidas" layoutX="313.0" layoutY="14.0" prefHeight="25.0" prefWidth="67.0" />
+                  <Label layoutX="278.0" layoutY="18.0" text="Total:" />
+                  <Button fx:id="BtnCadSaida" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
+                  <Button fx:id="BtnExcSaida" disable="true" layoutX="184.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
+                  <Button fx:id="BtnEdSaida" disable="true" layoutX="92.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="147.0" text="Entradas">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="ComboBoxEntradas" layoutX="190.0" layoutY="6.0" prefHeight="25.0" prefWidth="190.0" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="147.0" text="Saídas">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="ComboBoxSaidas" layoutX="190.0" layoutY="6.0" prefHeight="25.0" prefWidth="190.0" />
+               </children>
+            </Pane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="162.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="432.0" minHeight="10.0" prefHeight="345.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="93.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Separator layoutX="399.0" orientation="VERTICAL" prefHeight="442.0" prefWidth="0.0" />
+      <TextField fx:id="Balanco" layoutX="331.0" layoutY="470.0" />
+      <Label layoutX="378.0" layoutY="451.0" text="Balanço:" />
+      <Separator layoutY="440.0" prefHeight="1.0" prefWidth="800.0" />
+      <Button layoutX="15.0" layoutY="457.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+   </children>
+</Pane>

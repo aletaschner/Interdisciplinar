@@ -3,58 +3,117 @@
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+-fx-transition: all linear 1s;
+}
+.btnListaReserva:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 0 8px;
 }
 .btnCadReserva {
 -fx-background-image: url('cadReserva.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA #AAA transparent #AAA;
+}
+.btnCadReserva:hover {
+-fx-background-color:#AAA;
 }
 .btnConfReserva {
 -fx-background-image: url('confReserva.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+}
+.btnConfReserva:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 8px 0;
 }
 .btnListaCliente {
 -fx-background-image: url('clientes.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA #AAA transparent transparent;
+}
+.btnListaCliente:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 0 8px;
 }
 .btnCadCliente {
 -fx-background-image: url('cadCliente.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+}
+.btnCadCliente:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 8px 0;
 }
 .btnListaQuarto {
 -fx-background-image: url('quartos.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA #AAA transparent transparent;
+}
+.btnListaQuarto:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 0 8px;
 }
 .btnCadQuarto {
 -fx-background-image: url('cadQuarto.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+}
+.btnCadQuarto:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 8px 0;
 }
 .btnFinanceiro {
 -fx-background-image: url('financeiro.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA #AAA transparent transparent;
+}
+.btnFinanceiro:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 0 8px;
 }
 .btnConfiguracoes {
 -fx-background-image: url('configuracoes.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+}
+.btnConfiguracoes:hover {
+-fx-background-color:#AAA;
+-fx-background-radius: 0 0 8px 8px;
 }
 .btnGrafico {
 -fx-background-image: url('graph.png');
 -fx-background-repeat: no-repeat;
 -fx-background-position: center top;
 -fx-background-color: transparent;
+-fx-border-color:#AAA transparent transparent transparent;
+}
+.btnGrafico:hover {
+-fx-background-color: #AAA;
+-fx-background-radius: 0 0 8px 0;
+}
+.MenuPrincipal{
+-fx-background-color: linear-gradient(to bottom, #D9D9D9 0%, #CCC 100%) repeat scroll 0% 0%;
+-fx-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;
+-fx-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+-fx-background-radius:8px;
+}
+.MenuNormal {
+-fx-border-right: 1px solid #000;
 }
