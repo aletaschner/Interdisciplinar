@@ -1,7 +1,11 @@
 package controller;
 
 import java.net.URL;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
+
+import DAO.ClienteDao;
 import view.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,6 +17,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import model.Cliente;
 import model.TabListaCliente;
 
 public class ControllerListaClientes implements Initializable{
@@ -39,17 +44,27 @@ public class ControllerListaClientes implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
-
+		String telefone, celular;
 		Codigo.setCellValueFactory(cellData -> cellData.getValue().getCodigo());
 		Nome.setCellValueFactory(cellData -> cellData.getValue().getNome());
 		Email.setCellValueFactory(cellData -> cellData.getValue().getEmail());
 		Telefone.setCellValueFactory(cellData -> cellData.getValue().getTelefone());
 		Celular.setCellValueFactory(cellData -> cellData.getValue().getCelular());
 		Pais.setCellValueFactory(cellData -> cellData.getValue().getPais());
-		for(int i = 1; i < 10; i++){
-		TabListaCliente t = new TabListaCliente(i, "João", "joão@gmail.com", "(47)3396-7819", "(47)9754-7721", "Brasil");
-		itens.add(t);
+		List<Cliente> clientes;
+		try {
+			clientes = new ClienteDao().getListar();
+			for(int contador = 0; contador<clientes.size();contador++){
+				telefone = String.valueOf(clientes.get(contador).getTelefone());
+				celular = String.valueOf(clientes.get(contador).getCelular());
+				TabListaCliente tab = new TabListaCliente(clientes.get(contador).getCodigo(), clientes.get(contador).getNome(), clientes.get(contador).getEmail(), telefone, celular, clientes.get(contador).getRua());
+				itens.add(tab);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+
 		ListaClientes.setItems(itens);
 
 	}

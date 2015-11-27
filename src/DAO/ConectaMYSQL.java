@@ -9,9 +9,9 @@ public class ConectaMYSQL implements FactoryDataBase {
 	@Override
 	public Connection getConnection() throws SQLException  {
 
-		DriverManager.registerDriver(new org.sqlite.JDBC());
+		Connection Conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hostel","root","");
 
-		return DriverManager.getConnection(url);
+		return Conn;
 	}
 
 }
