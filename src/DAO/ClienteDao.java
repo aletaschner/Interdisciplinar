@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import model.Cliente;
 
 public class ClienteDao implements IAbstractDao<Cliente> {
@@ -52,13 +54,28 @@ public class ClienteDao implements IAbstractDao<Cliente> {
 			System.out.println("Nulo");
 
 		} else {
-
-			sql = "Insert into Aluno values(?,?,?,?)";
+			// @todo criar procedure
+			sql = "INSERT INTO hos_clientes(Nome, CPF, Telefone, Celular, CodCidade, EndRua, EndBairro, EndNum, Senha, Email)"
+					+ "VALUES (?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement prmt = this.conn.prepareStatement(sql);
 
-	//		prmt.setInt(1, objeto.getId());
+			prmt.setString(1, objeto.getNome());
+			prmt.setString(2, objeto.getCPF());
+			prmt.setInt(3, objeto.getTelefone());
+			prmt.setInt(4, objeto.getCelular());
+			prmt.setInt(5, objeto.getCodCidade());
+			prmt.setString(6, objeto.getRua());
+			prmt.setString(7, objeto.getBairro());
+			prmt.setInt(8, objeto.getEndNum());
+			prmt.setString(9, objeto.getSenha());
+			prmt.setString(10, objeto.getEmail());
 
-			prmt.executeUpdate();
+			int d = prmt.executeUpdate();
+			System.out.println(d);
+			if(d > 0){
+				JOptionPane.showMessageDialog(null, "Cliente Cadastrado com sucesso.", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+			}
+
 			prmt.close();
 		}
 		conn.close();
@@ -70,20 +87,32 @@ public class ClienteDao implements IAbstractDao<Cliente> {
 			System.out.println("Nulo");
 		} else {
 
-			sql = "Update Aluno set alunoNome =? , alunoDtNasc = ?, AlunoSexo = ? where alunoId = ?";
+			sql = "UPDATE hos_clientes SET Nome=?, CPF=?, Telefone=?, Celular=?, CodCidade=?, EndRua=?, EndBairro=?, EndNum=?, Senha=?, Email=?"
+					+ " WHERE Codigo=?";
 			PreparedStatement prmt = this.conn.prepareStatement(sql);
 
-			//prmt.setString(1, objeto.getNome());
-
+			prmt.setString(1, objeto.getNome());
+			prmt.setString(2, objeto.getCPF());
+			prmt.setInt(3, objeto.getTelefone());
+			prmt.setInt(4, objeto.getCelular());
+			prmt.setInt(5, 3);
+			prmt.setString(6, objeto.getRua());
+			prmt.setString(7, objeto.getBairro());
+			prmt.setInt(8, objeto.getEndNum());
+			prmt.setString(9, objeto.getSenha());
+			prmt.setString(10, objeto.getEmail());
+			prmt.setInt(11, objeto.getCodigo());
 			prmt.executeUpdate();
 			prmt.close();
+
+			JOptionPane.showMessageDialog(null, "Cliente alterado com sucesso.", "Aviso", JOptionPane.INFORMATION_MESSAGE);
 		}
 		conn.close();
 
 	}
 
 	@Override
-	public void setExcluir(Cliente objeto) throws SQLException {
+	public void setExcluir(int codigo) throws SQLException {
 		sql = "delete from aluno where alunoId=?";
 
 		PreparedStatement prmt = this.conn.prepareStatement(sql);
@@ -98,7 +127,7 @@ public class ClienteDao implements IAbstractDao<Cliente> {
 
 	@Override
 	public Cliente getDetalhe(int codigo) throws SQLException {
-		sql = "Select AlunoId, AlunoNome, AlunoDtNasc, AlunoSexo from Aluno where AlunoId = ?";
+		sql = "Select * FROM hos_clientes WHERE Codigo=?";
 
 		PreparedStatement prmt = this.conn.prepareStatement(sql);
 
@@ -107,7 +136,17 @@ public class ClienteDao implements IAbstractDao<Cliente> {
 		Cliente a = null;
 		if (rs.next()) {
 			a = new Cliente();
-		//	a.setId(rs.getInt("AlunoId"));
+			a.setCodigo(rs.getInt("Codigo"));
+			a.setNome(rs.getString("Nome"));
+			a.setCPF(rs.getString("CPF"));
+			a.setTelefone(rs.getInt("Telefone"));
+			a.setCelular(rs.getInt("Celular"));
+			a.setCodCidade(rs.getInt("CodCidade"));
+			a.setRua(rs.getString("EndRua"));
+			a.setBairro(rs.getString("EndBairro"));
+			a.setEndNum(rs.getInt("EndNum"));
+			a.setSenha(rs.getString("Senha"));
+			a.setEmail(rs.getString("Email"));
 		}
 		conn.close();
 		return a;

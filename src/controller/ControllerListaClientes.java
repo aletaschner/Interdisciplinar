@@ -35,7 +35,7 @@ public class ControllerListaClientes implements Initializable{
 	@FXML
 	TextField Total;
 	@FXML
-	Button btnConfirmar, btnEditar, btnExcluir;
+	Button BtnConfirmar, BtnEditar, BtnExcluir;
 
 	public void setMain(Main m){
 		this.Main  = m;
@@ -67,6 +67,29 @@ public class ControllerListaClientes implements Initializable{
 
 		ListaClientes.setItems(itens);
 
+	}
+
+	public void botoesCtrl(){
+		int item = ListaClientes.getSelectionModel().getSelectedCells().size();
+
+		if(item > 0){
+			BtnEditar.setDisable(false);
+			BtnExcluir.setDisable(false);
+		}else{
+			BtnEditar.setDisable(true);
+			BtnExcluir.setDisable(true);
+		}
+
+	}
+
+	public void editarCliente(){
+		int selectedIndex = ListaClientes.getSelectionModel().getSelectedIndex();
+		int IdSelecionado = ListaClientes.getItems().get(selectedIndex).getCodigoInt();
+		Main.initCadCliente(IdSelecionado);
+	}
+
+	public void cadastrarCliente(){
+		Main.initCadCliente();
 	}
 
 }

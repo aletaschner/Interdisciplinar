@@ -74,12 +74,12 @@ public class UsuarioDAO implements IAbstractDao<Usuario> {
 	}
 
 	@Override
-	public void setExcluir(Usuario objeto) throws SQLException {
+	public void setExcluir(int codigo) throws SQLException {
 		sql = "delete from usuario where UsuaruiID=?";
 
 		PreparedStatement prmt = this.conn.prepareStatement(sql);
 
-		prmt.setInt(1, objeto.getUsuarioid());
+		//prmt.setInt(1, objeto.getUsuarioid());
 
 		prmt.execute();
 		prmt.close();

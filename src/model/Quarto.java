@@ -5,6 +5,7 @@ public class Quarto {
 	private int Codigo, QtdCamas;
 	private double Preco;
 	private String[] Fotos;
+	private String FotoCapa, Nome;
 
 	public void setCodigo(int Codigo){
 		this.Codigo = Codigo;
@@ -29,5 +30,17 @@ public class Quarto {
 	}
 	public String[] getFotos(){
 		return this.Fotos;
+	}
+	public void setFotoCapa(String FotoCapa){
+		this.FotoCapa = FotoCapa;
+	}
+	public String getFotoCapa(){
+		return this.FotoCapa;
+	}
+	public void setNome(String Nome){
+		this.Nome = Nome;
+	}
+	public String getNome(){
+		return this.Nome;
 	}
 }

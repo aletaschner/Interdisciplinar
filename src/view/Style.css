@@ -39,3 +39,12 @@
 
   -fx-border-color: #398439;
 }
+.Opt {
+  -fx-background-color: #FFF;
+  -fx-padding: 15px;
+  -fx-border-color: #000;
+}
+.Opt:selected {
+  -fx-background-color: #35FF42;
+  -fx-text-fill: #FFF;	
+}

@@ -1,34 +1,31 @@
 package model;
 
+import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class TabListaQuarto {
-	private final IntegerProperty Codigo, Valor, Hospedes;
-	private final StringProperty Cliente, Quarto, Entrada, Saida, StatusPgto;
+	private final IntegerProperty Codigo, Capacidade;
+	private final StringProperty Nome, Configuracao;
+	private final DoubleProperty Preco;
 
 	public TabListaQuarto(){
 		this.Codigo = null;
-		this.Valor = null;
-		this.Hospedes = null;
-		this.Cliente = null;
-		this.Quarto = null;
-		this.Entrada = null;
-		this.Saida = null;
-		this.StatusPgto = null;
+		this.Capacidade = null;
+		this.Nome = null;
+		this.Configuracao = null;
+		this.Preco = null;
 	}
 
-	public TabListaQuarto(int c, int v, int h, String cl ,String q, String e, String s, String pgt){
+	public TabListaQuarto(int c, int ca, String n, String co ,Double p){
 		Codigo = new SimpleIntegerProperty(c);
-		Valor = new SimpleIntegerProperty(v);
-		Hospedes = new SimpleIntegerProperty(h);
-		Cliente = new SimpleStringProperty(cl);
-		Quarto = new SimpleStringProperty(q);
-		Entrada = new SimpleStringProperty(e);
-		Saida = new SimpleStringProperty(s);
-		StatusPgto = new SimpleStringProperty(pgt);
+		Nome = new SimpleStringProperty(n);
+		Capacidade = new SimpleIntegerProperty(ca);
+		Configuracao = new SimpleStringProperty(co);
+		Preco = new SimpleDoubleProperty(p);
 	}
 
 	public IntegerProperty getCodigo() {
@@ -40,67 +37,40 @@ public class TabListaQuarto {
 	public int getCodigoInt() {
 		return Codigo.get();
 	}
-	public IntegerProperty getValor() {
-		return Valor;
+	public IntegerProperty getCapacidade(){
+		return Capacidade;
 	}
-	public void setValor(int valor){
-		this.Valor.set(valor);
+	public void setCapacidade(int Capacidade){
+		this.Capacidade.set(Capacidade);
 	}
-	public int getValorInt(){
-		return Valor.get();
+	public int getCapacidadeInt(){
+		return this.Capacidade.get();
 	}
-	public IntegerProperty getHospedes(){
-		return Hospedes;
+	public StringProperty getNome(){
+		return Nome;
 	}
-	public void setHospedes(int hospedes){
-		this.Hospedes.set(hospedes);
+	public void setNome(String Nome){
+		this.Nome.set(Nome);
 	}
-	public int getHospedesInt(){
-		return Hospedes.get();
+	public String getNomeString(){
+		return this.Nome.get();
 	}
-	public StringProperty getCliente(){
-		return Cliente;
+	public DoubleProperty getPreco(){
+		return this.Preco;
 	}
-	public void setCliente(String cliente){
-		this.Cliente.set(cliente);
+	public void setPreco(Double Preco){
+		this.Preco.set(Preco);
 	}
-	public String getClienteString(){
-		return Cliente.get();
+	public Double getPrecoDouble(){
+		return this.Preco.get();
 	}
-	public StringProperty getQuarto(){
-		return Quarto;
+	public StringProperty getConfiguracao(){
+		return this.Configuracao;
 	}
-	public void setQuarto(String quarto){
-		this.Quarto.set(quarto);
+	public void setConfiguracao(String Configuracao){
+		this.Configuracao.set(Configuracao);
 	}
-	public String getQuartoString(){
-		return Quarto.get();
-	}
-	public StringProperty getEntrada(){
-		return Entrada;
-	}
-	public void setEntrada(String entrada){
-		this.Entrada.set(entrada);
-	}
-	public String getEntradaString(){
-		return Entrada.get();
-	}
-	public StringProperty getSaida(){
-		return Saida;
-	}
-	public void setSaida(String saida){
-		this.Saida.set(saida);
-	}
-	public String getSaidaString(){
-		return Saida.get();
-	}
-	public StringProperty getStatusPgto(){
-		return StatusPgto;
-	}
-	public void setStatusPgto(String statuspgto){
-		this.StatusPgto.set(statuspgto);
-	}
-	public String getStatusPgtoString(){
-		return StatusPgto.get();
+	public String getConfiguracaoString(){
+		return this.Configuracao.get();
 	}
 }

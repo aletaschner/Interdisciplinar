@@ -4,6 +4,7 @@ public class Cliente {
  private int Codigo, Telefone, Celular, CodCidade, EndNum;
  private String CPF, Rua, Bairro, Nome, Senha, Email;
 
+ public Cliente(){}
  public void setCodigo(int Codigo){
 	 this.Codigo = Codigo;
  }

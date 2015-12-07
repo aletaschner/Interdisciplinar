@@ -32,9 +32,16 @@ public class ControlerMain implements Initializable{
 	public void initCadCliente(){
 		main.initCadCliente();
 	}
+	public void initCadCliente(int Codigo){
+		main.initCadCliente(Codigo);
+	}
 
 	public void initCadQuarto(){
 		main.initCadQuarto();
+	}
+
+	public void initCadQuarto(int Codigo){
+		main.initCadQuarto(Codigo);
 	}
 
 	public void initCadReserva(){

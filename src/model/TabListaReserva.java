@@ -1,13 +1,16 @@
 package model;
 
+import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class TabListaReserva {
-	private final IntegerProperty Codigo, Valor, Hospedes;
+	private final IntegerProperty Codigo, Hospedes;
 	private final StringProperty Cliente, Quarto, Entrada, Saida, StatusPgto;
+	private final DoubleProperty Valor;
 
 	public TabListaReserva(){
 		this.Codigo = null;
@@ -20,9 +23,9 @@ public class TabListaReserva {
 		this.StatusPgto = null;
 	}
 
-	public TabListaReserva(int c, int v, int h, String cl ,String q, String e, String s, String pgt){
+	public TabListaReserva(int c, Double v, int h, String cl ,String q, String e, String s, String pgt){
 		Codigo = new SimpleIntegerProperty(c);
-		Valor = new SimpleIntegerProperty(v);
+		Valor = new SimpleDoubleProperty(v);
 		Hospedes = new SimpleIntegerProperty(h);
 		Cliente = new SimpleStringProperty(cl);
 		Quarto = new SimpleStringProperty(q);
@@ -40,13 +43,13 @@ public class TabListaReserva {
 	public int getCodigoInt() {
 		return Codigo.get();
 	}
-	public IntegerProperty getValor() {
+	public DoubleProperty getValor() {
 		return Valor;
 	}
-	public void setValor(int valor){
+	public void setValor(Double valor){
 		this.Valor.set(valor);
 	}
-	public int getValorInt(){
+	public Double getValorDouble(){
 		return Valor.get();
 	}
 	public IntegerProperty getHospedes(){

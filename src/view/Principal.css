@@ -110,10 +110,5 @@
 }
 .MenuPrincipal{
 -fx-background-color: linear-gradient(to bottom, #D9D9D9 0%, #CCC 100%) repeat scroll 0% 0%;
--fx-box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8) inset;
--fx-text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
 -fx-background-radius:8px;
-}
-.MenuNormal {
--fx-border-right: 1px solid #000;
 }

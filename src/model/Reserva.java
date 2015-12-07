@@ -4,10 +4,10 @@ import java.sql.Date;
 
 public class Reserva {
 
-	private int Codigo, CodigoCliente, StatusPgto;
-	private Date DataCadastro, DataEntrada, DataSaida;
-	private Double Valor;
-	private String MetodoPagamento;
+	private int Codigo, CodigoCliente, StatusPgto, QtdParcelas, MetodoPagamento, CodigoQuarto, QtdDias, QtdVisitantes;
+	private java.util.Date DataCadastro, DataEntrada, DataSaida;
+	private Double Valor, ValorDesconto;
+	private String Observacao, MotivoDesconto;
 
 	public void setCodigo(int Codigo){
 		this.Codigo = Codigo;
@@ -30,19 +30,19 @@ public class Reserva {
 	public void setDataCadastro(Date DataCadastro){
 		this.DataCadastro = DataCadastro;
 	}
-	public Date getDataCadastro(){
+	public java.util.Date getDataCadastro(){
 		return this.DataCadastro;
 	}
-	public void setDataEntrada(Date DataEntrada){
-		this.DataEntrada = DataEntrada;
+	public void setDataEntrada(java.util.Date date){
+		this.DataEntrada = date;
 	}
-	public Date getDataEntrada(){
+	public java.util.Date getDataEntrada(){
 		return this.DataEntrada;
 	}
-	public void setDataSaida(Date DataSaida){
-		this.DataSaida = DataSaida;
+	public void setDataSaida(java.util.Date date){
+		this.DataSaida = date;
 	}
-	public Date getDataSaida(){
+	public java.util.Date getDataSaida(){
 		return this.DataSaida;
 	}
 	public void setValor(Double Valor){
@@ -51,10 +51,46 @@ public class Reserva {
 	public Double getValor(){
 		return this.Valor;
 	}
-	public void setMetodoPgto(String MetodoPgto){
+	public void setMetodoPgto(int MetodoPgto){
 		this.MetodoPagamento = MetodoPgto;
 	}
-	public String getMetodoPgto(){
+	public int getMetodoPgto(){
 		return this.MetodoPagamento;
+	}
+	public String getObservacao(){
+		return this.Observacao;
+	}
+	public void setObservacao(String Observacao){
+		this.Observacao = Observacao;
+	}
+	public Double getValorDesconto(){
+		return this.ValorDesconto;
+	}
+	public void setValorDesconto(Double ValorDesconto){
+		this.ValorDesconto = ValorDesconto;
+	}
+	public String getMotivoDesconto(){
+		return this.MotivoDesconto;
+	}
+	public void setMotivoDesconto(String MotivoDesconto){
+		this.MotivoDesconto = MotivoDesconto;
+	}
+	public int getQtdParcelas(){
+		return this.QtdParcelas;
+	}
+	public void setQtdParcelas(int QtdParcelas){
+		this.QtdParcelas = QtdParcelas;
+	}
+	public int getCodigoQuarto(){
+		return this.CodigoQuarto;
+	}
+	public void setCodigoQuarto(int CodigoQuarto){
+		this.CodigoQuarto = CodigoQuarto;
+	}
+	public void setQtdDias(int QtdDias){
+		this.QtdDias = QtdDias;
+	}
+	public int getQtdDias(){
+		return this.QtdDias;
 	}
 }

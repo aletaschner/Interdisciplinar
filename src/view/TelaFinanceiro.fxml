@@ -29,14 +29,14 @@
                   <Label layoutX="277.0" layoutY="17.0" text="Total:" />
                   <Button fx:id="BtnEdEntrada" disable="true" layoutX="92.0" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
                   <Button fx:id="BtnExcEntrada" disable="true" layoutX="184.0" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
-                  <Button fx:id="BtnCadEntrada" layoutY="7.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
+                  <Button fx:id="BtnCadEntrada" layoutY="7.0" mnemonicParsing="false" onAction="#initCadEntrada" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <TextField fx:id="TotalSaidas" layoutX="313.0" layoutY="14.0" prefHeight="25.0" prefWidth="67.0" />
                   <Label layoutX="278.0" layoutY="18.0" text="Total:" />
-                  <Button fx:id="BtnCadSaida" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
+                  <Button fx:id="BtnCadSaida" layoutY="8.0" mnemonicParsing="false" onAction="#initCadSaida" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
                   <Button fx:id="BtnExcSaida" disable="true" layoutX="184.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
                   <Button fx:id="BtnEdSaida" disable="true" layoutX="92.0" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
                </children>

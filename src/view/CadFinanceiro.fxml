@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadFinanceiro">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="142.0" text="Cadastro de">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="207.0" mnemonicParsing="false" onAction="#Salvar" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Salvar" />
+      <Button layoutX="112.0" layoutY="207.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+      <TextField fx:id="Motivo" layoutX="14.0" layoutY="169.0" prefHeight="25.0" prefWidth="375.0" />
+      <TextField fx:id="Valor" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="375.0" />
+      <DatePicker fx:id="Data" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="375.0" />
+      <Label layoutX="14.0" layoutY="56.0" text="Data:" />
+      <Label layoutX="14.0" layoutY="103.0" text="Valor:" />
+      <Label layoutX="15.0" layoutY="150.0" text="Motivo:" />
+      <Label fx:id="Tipo" layoutX="157.0" layoutY="14.0" prefHeight="50.0" prefWidth="142.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerCadCliente">
    <children>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="231.0" text="Cadastro de Cliente">
@@ -13,36 +12,41 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Region layoutX="14.0" layoutY="64.0" prefHeight="426.0" prefWidth="776.0" style="-fx-background-color: #CCC;" />
       <Label layoutX="25.0" layoutY="75.0" text="Nome completo:" />
-      <TextField layoutX="25.0" layoutY="94.0" prefHeight="25.0" prefWidth="756.0" />
-      <TextField layoutX="25.0" layoutY="146.0" prefHeight="25.0" prefWidth="248.0" />
-      <Label layoutX="25.0" layoutY="123.0" text="E-mail:" />
-      <TextField layoutX="279.0" layoutY="146.0" prefHeight="25.0" prefWidth="248.0" />
-      <Label layoutX="281.0" layoutY="123.0" text="Telefone:" />
-      <TextField layoutX="533.0" layoutY="146.0" prefHeight="25.0" prefWidth="248.0" />
-      <Label layoutX="533.0" layoutY="123.0" text="Celular:" />
-      <Label layoutX="25.0" layoutY="183.0" text="País:" />
-      <TextField layoutX="25.0" layoutY="206.0" prefHeight="25.0" prefWidth="248.0" />
-      <Label layoutX="281.0" layoutY="183.0" text="Estado:" />
-      <TextField layoutX="279.0" layoutY="206.0" prefHeight="25.0" prefWidth="248.0" />
-      <TextField layoutX="533.0" layoutY="206.0" prefHeight="25.0" prefWidth="248.0" />
-      <Label layoutX="533.0" layoutY="183.0" text="Cidade:" />
-      <Label layoutX="25.0" layoutY="242.0" text="Bairro:" />
-      <TextField layoutX="25.0" layoutY="265.0" prefHeight="25.0" prefWidth="306.0" />
-      <Label layoutX="341.0" layoutY="242.0" text="Rua:" />
-      <TextField layoutX="338.0" layoutY="265.0" prefHeight="25.0" prefWidth="312.0" />
-      <TextField layoutX="657.0" layoutY="265.0" prefHeight="25.0" prefWidth="124.0" />
-      <Label layoutX="657.0" layoutY="242.0" text="Número:" />
-      <Label layoutX="26.0" layoutY="300.0" text="Complemento:" />
-      <TextField layoutX="25.0" layoutY="324.0" prefHeight="25.0" prefWidth="306.0" />
-      <Label layoutX="342.0" layoutY="300.0" text="CEP:" />
-      <TextField layoutX="338.0" layoutY="324.0" prefHeight="25.0" prefWidth="124.0" />
-      <TextField layoutX="469.0" layoutY="324.0" prefHeight="25.0" prefWidth="312.0" />
-      <Label layoutX="469.0" layoutY="300.0" text="Referência:" />
-      <Label layoutX="26.0" layoutY="359.0" text="Observação:" />
-      <TextArea layoutX="25.0" layoutY="386.0" prefHeight="50.0" prefWidth="756.0" />
-      <Button layoutX="25.0" layoutY="443.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Salvar" />
-      <Button layoutX="123.0" layoutY="443.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+      <TextField fx:id="Nome" layoutX="25.0" layoutY="94.0" prefHeight="25.0" prefWidth="756.0" />
+      <TextField fx:id="CPF" layoutX="24.0" layoutY="146.0" prefHeight="25.0" prefWidth="170.0" />
+      <TextField fx:id="Email" layoutX="197.0" layoutY="146.0" prefHeight="25.0" prefWidth="281.0" />
+      <TextField fx:id="Senha" layoutX="481.0" layoutY="146.0" />
+      <TextField fx:id="SenhaConfirma" layoutX="633.0" layoutY="146.0" />
+      <Label layoutX="200.0" layoutY="126.0" text="E-mail:" />
+      <TextField fx:id="Telefone" layoutX="25.0" layoutY="201.0" prefHeight="25.0" prefWidth="349.0" />
+      <Label layoutX="24.0" layoutY="178.0" text="Telefone:" />
+      <TextField fx:id="Celular" layoutX="378.0" layoutY="201.0" prefHeight="25.0" prefWidth="402.0" />
+      <Label layoutX="380.0" layoutY="178.0" text="Celular:" />
+      <Label layoutX="25.0" layoutY="226.0" text="País:" />
+      <TextField fx:id="Pais" layoutX="25.0" layoutY="250.0" prefHeight="25.0" prefWidth="248.0" />
+      <Label layoutX="279.0" layoutY="226.0" text="Estado:" />
+      <TextField fx:id="Estado" layoutX="279.0" layoutY="250.0" prefHeight="25.0" prefWidth="248.0" />
+      <TextField fx:id="Cidade" layoutX="533.0" layoutY="250.0" prefHeight="25.0" prefWidth="248.0" />
+      <Label layoutX="533.0" layoutY="226.0" text="Cidade:" />
+      <Label layoutX="26.0" layoutY="277.0" text="Bairro:" />
+      <TextField fx:id="Bairro" layoutX="25.0" layoutY="297.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="341.0" layoutY="278.0" prefHeight="0.0" prefWidth="23.0" text="Rua:" />
+      <TextField fx:id="Rua" layoutX="338.0" layoutY="297.0" prefHeight="25.0" prefWidth="312.0" />
+      <TextField fx:id="Num" layoutX="657.0" layoutY="297.0" prefHeight="25.0" prefWidth="124.0" />
+      <Label layoutX="657.0" layoutY="278.0" text="Número:" />
+      <Label layoutX="27.0" layoutY="328.0" text="Complemento:" />
+      <TextField fx:id="Complemento" layoutX="25.0" layoutY="351.0" prefHeight="25.0" prefWidth="306.0" />
+      <Label layoutX="341.0" layoutY="330.0" text="CEP:" />
+      <TextField fx:id="CEP" layoutX="338.0" layoutY="351.0" prefHeight="25.0" prefWidth="124.0" />
+      <TextField fx:id="Referencia" layoutX="469.0" layoutY="351.0" prefHeight="25.0" prefWidth="312.0" />
+      <Label layoutX="469.0" layoutY="328.0" text="Referência:" />
+      <Label layoutX="26.0" layoutY="379.0" text="Observação:" />
+      <TextArea fx:id="Observacao" layoutX="25.0" layoutY="403.0" prefHeight="50.0" prefWidth="756.0" />
+      <Button layoutX="25.0" layoutY="460.0" mnemonicParsing="false" onAction="#Salvar" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Salvar" />
+      <Button layoutX="123.0" layoutY="460.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
+      <Label layoutX="483.0" layoutY="126.0" text="Senha:" />
+      <Label layoutX="633.0" layoutY="126.0" text="Senha novamente:" />
+      <Label layoutX="23.0" layoutY="126.0" text="CPF:" />
    </children>
 </Pane>

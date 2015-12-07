@@ -12,7 +12,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Label>
-      <Button layoutX="22.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Salvar" />
+      <Button layoutX="22.0" layoutY="462.0" mnemonicParsing="false" onAction="#Salvar" prefHeight="37.0" prefWidth="89.0" text="Salvar" />
       <Button layoutX="116.0" layoutY="462.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
       <TabPane layoutX="14.0" layoutY="52.0" prefHeight="297.0" prefWidth="769.0" style="-fx-border-color: #CCC;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -22,14 +22,16 @@
                      <children>
                         <TextArea fx:id="Observacao" layoutX="7.0" layoutY="205.0" prefHeight="50.0" prefWidth="756.0" />
                         <Label layoutX="8.0" layoutY="178.0" text="Observação:" />
-                        <TextField fx:id="Quarto" layoutX="7.0" layoutY="145.0" prefHeight="25.0" prefWidth="756.0" />
                         <Label layoutX="7.0" layoutY="122.0" text="Quarto:" />
                         <Label layoutX="382.0" layoutY="62.0" text="Data Saída" />
                         <Label layoutX="7.0" layoutY="62.0" text="Data Entrada:" />
-                        <TextField fx:id="Cliente" layoutX="7.0" layoutY="33.0" prefHeight="25.0" prefWidth="756.0" />
                         <Label layoutX="7.0" layoutY="14.0" text="Cliente:" />
-                        <DatePicker fx:id="DataEntrada" layoutX="8.0" layoutY="86.0" prefHeight="25.0" prefWidth="368.0" />
-                        <DatePicker fx:id="DataSaida" layoutX="382.0" layoutY="86.0" prefHeight="25.0" prefWidth="380.0" />
+                        <DatePicker fx:id="DataEntrada" layoutX="8.0" layoutY="86.0" onAction="#calcula" prefHeight="25.0" prefWidth="368.0" />
+                        <DatePicker fx:id="DataSaida" layoutX="382.0" layoutY="86.0" onAction="#calcula" prefHeight="25.0" prefWidth="380.0" />
+                        <ComboBox fx:id="QuartoSelect" layoutX="8.0" layoutY="146.0" onAction="#pegaQuarto" prefHeight="25.0" prefWidth="367.0" />
+                        <Label layoutX="382.0" layoutY="122.0" text="Valor Quarto:" />
+                        <ComboBox fx:id="ClienteSelect" layoutX="8.0" layoutY="33.0" onAction="#pegaCliente" prefHeight="25.0" prefWidth="752.0" />
+                        <TextField fx:id="VlrQuarto" layoutX="385.0" layoutY="146.0" prefHeight="25.0" prefWidth="375.0" />
                      </children>
                   </AnchorPane>
             </content>

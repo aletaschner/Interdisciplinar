@@ -72,6 +72,31 @@ public class Main extends Application {
 		}
 	}
 
+	public void initCadCliente(int Codigo){
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("CadCliente.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Edição de Cliente");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerCadCliente CCad = loader.getController();
+			CCad.setMain(this);
+			CCad.carrega(Codigo);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 	public void initCadQuarto() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
@@ -95,6 +120,32 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
+	public void initCadQuarto(int Codigo) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("CadQuarto.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Edição de Quarto");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerCadQuarto CCad = loader.getController();
+			CCad.setMain(this);
+			CCad.carrega(Codigo);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 
 	public void initCadReserva() {
 		try {
@@ -235,6 +286,31 @@ public class Main extends Application {
 
 			ControllerFinanceiro CCad = loader.getController();
 			CCad.setMain(this);
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void initCadFinanceiro(char Tipo){
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("CadFinanceiro.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Cadastro Financeiro");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerCadFinanceiro CCad = loader.getController();
+			CCad.setMain(this);
+			CCad.tipo = Tipo;
 
 			Novatela.showAndWait();
 		} catch (Exception e) {

@@ -13,19 +13,18 @@
          </font>
       </Label>
       <Button layoutX="14.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" text="Cancelar" />
-      <TableView fx:id="ListaClientes" layoutX="14.0" layoutY="64.0" prefHeight="378.0" prefWidth="779.0">
+      <TableView fx:id="ListaClientes" layoutX="14.0" layoutY="64.0" onMouseClicked="#botoesCtrl" onMouseExited="#botoesCtrl" prefHeight="378.0" prefWidth="779.0">
         <columns>
           <TableColumn fx:id="Codigo" prefWidth="49.0" text="Código" />
           <TableColumn fx:id="Nome" prefWidth="241.0" text="Nome" />
             <TableColumn fx:id="Email" prefWidth="197.0" text="E-mail" />
             <TableColumn fx:id="Telefone" minWidth="0.0" prefWidth="88.0" text="Telefone" />
             <TableColumn fx:id="Celular" prefWidth="90.0" text="Celular" />
-            <TableColumn fx:id="Pais" prefWidth="99.0" text="País" />
+            <TableColumn fx:id="Pais" prefWidth="113.0" text="País" />
         </columns>
       </TableView>
-      <Button fx:id="BtnConfirmar" disable="true" layoutX="498.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Confirmar" />
+      <Button fx:id="BtnConfirmar" layoutX="498.0" layoutY="449.0" mnemonicParsing="false" onMouseClicked="#cadastrarCliente" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Cadastrar" />
       <Button fx:id="BtnExcluir" disable="true" layoutX="698.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
-      <Button fx:id="BtnEditar" disable="true" layoutX="598.0" layoutY="449.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
-      <Region layoutX="490.0" layoutY="446.0" prefHeight="43.0" prefWidth="305.0" style="-fx-border-color: #000;" />
+      <Button fx:id="BtnEditar" disable="true" layoutX="598.0" layoutY="449.0" mnemonicParsing="false" onMouseClicked="#editarCliente" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
    </children>
 </Pane>
