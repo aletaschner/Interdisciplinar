@@ -63,4 +63,7 @@ public class ControlerMain implements Initializable{
 	public void initFinanceiro(){
 		main.initFinanceiro();
 	}
+	public void initChecks(int Codigo){
+		main.initChecks(Codigo);
+	}
 }

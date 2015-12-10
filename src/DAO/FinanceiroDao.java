@@ -59,7 +59,7 @@ public class FinanceiroDao implements IAbstractDao<Financeiro> {
 
 		prmt.setDouble(1, objeto.getValor());
 		prmt.setString(2, objeto.getMotivo());
-		prmt.setDate(3, objeto.getDate());
+		prmt.setDate(3, new java.sql.Date(objeto.getDate().getTime()));
 		prmt.execute();
 
 		JOptionPane.showMessageDialog(null, "Cadastrado com sucesso.", "Aviso", JOptionPane.INFORMATION_MESSAGE);

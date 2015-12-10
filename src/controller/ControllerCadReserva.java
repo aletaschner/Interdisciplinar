@@ -3,6 +3,7 @@ package controller;
 import java.net.URL;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ResourceBundle;
 
@@ -25,6 +26,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.util.converter.LocalDateStringConverter;
 
 public class ControllerCadReserva implements Initializable{
 
@@ -96,6 +98,9 @@ public class ControllerCadReserva implements Initializable{
 			ReservaDao rd = new ReservaDao();
 			if(rd.checaDatas(r) == true){
 				rd.setInserir(r);
+				JOptionPane.showMessageDialog(null, "Cadastrado com sucesso", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				Main.getPrimaryStage().close();
+				Main.initMain();
 			} else {
 				JOptionPane.showMessageDialog(null, "Data não aprovada", "Aviso", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -108,7 +113,7 @@ public class ControllerCadReserva implements Initializable{
 
 
 	}
-
+	// checa campos
 	public Boolean checa(){
 		Boolean env = true;
 
@@ -141,23 +146,34 @@ public class ControllerCadReserva implements Initializable{
 
 		return env;
 	}
-	public void carrega(int Codigo){
+	public void carrega(int Codigo) throws SQLException{
 		if(Codigo < 0){
 			return;
 		}
-		//Reserva r =  new ReservaDao().
-		Cliente.setText("João");
-		Desconto.setText("5%");
-		Motivo.setText("Pagamento a vista");
-		Quarto.setText("Quarto 1");
-		Metodo.setValue("Cartão");
-		QtdParcelas.setValue("2");
-		Valor.setText("235.00");
-		Observacao.setText("bla blab blab blab bla bla bla bla bla bla bla");
+		Reserva r =  new ReservaDao().getDetalhe(Codigo);
+		Cliente c = new ClienteDao().getDetalhe(r.getCodigoCliente());
+		Quarto q = new QuartoDao().getDetalhe(r.getCodigoQuarto());
+		ClienteSelect.setValue(c.getNome());
+		this.CodigoCliente = c.getCodigo();
+		Desconto.setText(String.valueOf(r.getValorDesconto()));
+		Motivo.setText(r.getMotivoDesconto());
+		QuartoSelect.setValue(q.getNome());
+		VlrQuarto.setText(String.valueOf(q.getPreco()));
+		Metodo.getSelectionModel().select(r.getMetodoPgto());
+		QtdParcelas.setValue(String.valueOf(r.getQtdParcelas()));
+		Valor.setText(String.valueOf(r.getValor()));
+		Observacao.setText(r.getObservacao());
+		java.util.Date d = new java.util.Date(r.getDataEntrada().getTime());
+		LocalDate l = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		DataEntrada.setValue(l);
+		d = new java.util.Date(r.getDataSaida().getTime());
+		l = d.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		DataSaida.setValue(l);
+		System.out.println(r.getDataEntrada());
 	}
 
 
-
+	// calcula a quantidade de dias entre as datas
 	public static int difDatas(java.util.Date dateE, java.util.Date dateS) {
         long tempo1 = dateE.getTime();
         long tempo2 = dateS.getTime();
@@ -177,6 +193,7 @@ public class ControllerCadReserva implements Initializable{
 		VlrQuarto.setText(String.valueOf(this.ValorQuarto));
 	}
 
+	// Valor da reserva
 	public void calcula(){
 		java.util.Date dateE = Date.from(DataEntrada.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
 		java.util.Date dateS = Date.from(DataSaida.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());

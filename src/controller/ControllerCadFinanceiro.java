@@ -63,6 +63,9 @@ public class ControllerCadFinanceiro implements Initializable{
 			f.setMotivo(Motivo.getText());
 			f.setValor(Double.parseDouble(Valor.getText()));
 			fd.setInserir(f);
+			JOptionPane.showMessageDialog(null, "Cadastrado com sucesso", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+			Main.getPrimaryStage().close();
+			Main.initMain();
 		}
 
 

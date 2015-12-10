@@ -45,7 +45,7 @@ public class ReservaDao implements IAbstractDao<Reserva> {
 			r.setQtdParcelas(rs.getInt("QtdParcelas"));
 			r.setMotivoDesconto(rs.getString("MotivoDesconto"));
 			r.setCodigoQuarto(rs.getInt("CodigoQuarto"));
-
+			Reservas.add(r);
 		}
 		conn.close();
 		return Reservas;
@@ -185,7 +185,7 @@ public class ReservaDao implements IAbstractDao<Reserva> {
 			r.setDataEntrada(rs.getDate("DataEntrada"));
 			r.setDataSaida(rs.getDate("DataSaida"));
 			r.setValor(rs.getDouble("Valor"));
-			r.setValorDesconto(rs.getDouble("ValoDesconto"));
+			r.setValorDesconto(rs.getDouble("ValorDesconto"));
 			r.setMotivoDesconto(rs.getString("MotivoDesconto"));
 			r.setQtdParcelas(rs.getInt("QtdParcelas"));
 			r.setMetodoPgto(rs.getInt("CodigoMetodoPagamento"));

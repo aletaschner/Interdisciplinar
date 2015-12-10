@@ -260,7 +260,7 @@ public class Main extends Application {
 			Novatela.setScene(scene);
 
 			ControllerCadReserva CCad = loader.getController();
-			CCad.CarregaReserva(Codigo);
+			CCad.carrega(Codigo);
 			CCad.setMain(this);
 
 			Novatela.showAndWait();
@@ -311,6 +311,31 @@ public class Main extends Application {
 			ControllerCadFinanceiro CCad = loader.getController();
 			CCad.setMain(this);
 			CCad.tipo = Tipo;
+
+			Novatela.showAndWait();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void initChecks(int Codigo) {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Main.class.getResource("CheckInCheckout.fxml"));
+			Pane tela = (Pane) loader.load();
+
+			Stage Novatela = new Stage();
+			Novatela.setTitle("Check in ou Check Out");
+			Novatela.initModality(Modality.APPLICATION_MODAL);
+			Novatela.initStyle(StageStyle.UTILITY);
+			Novatela.setResizable(false);
+
+			Scene scene = new Scene(tela);
+			Novatela.setScene(scene);
+
+			ControllerChecks CCad = loader.getController();
+			CCad.setMain(this);
+			CCad.carrega(Codigo);
 
 			Novatela.showAndWait();
 		} catch (Exception e) {

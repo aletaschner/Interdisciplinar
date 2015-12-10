@@ -19,16 +19,15 @@
           <TableColumn fx:id="Cliente" prefWidth="130.0" text="Cliente" />
             <TableColumn fx:id="Entrada" prefWidth="90.0" text="Entrada" />
             <TableColumn fx:id="Saida" prefWidth="102.0" text="Saída" />
-            <TableColumn fx:id="Quarto" prefWidth="135.0" text="Quarto" />
-            <TableColumn fx:id="Hospedes" prefWidth="66.0" text="Hospedes" />
+            <TableColumn fx:id="Quarto" prefWidth="130.0" text="Quarto" />
+            <TableColumn fx:id="Hospedes" prefWidth="71.0" text="Hospedes" />
             <TableColumn fx:id="StatusPgto" prefWidth="140.0" text="Status Pgto" />
             <TableColumn fx:id="Valor" prefWidth="64.0" text="Valor" />
         </columns>
       </TableView>
       <TextField fx:id="Total" layoutX="731.0" layoutY="33.0" prefHeight="25.0" prefWidth="55.0" />
-      <Region layoutX="489.0" layoutY="435.0" prefHeight="43.0" prefWidth="305.0" style="-fx-border-color: #000;" />
-      <Button fx:id="BtnEditar" disable="true" layoutX="597.0" layoutY="438.0" mnemonicParsing="false" onAction="#Editar" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
+      <Button fx:id="BtnEditar" disable="true" layoutX="597.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnEditar" text="Editar" />
       <Button fx:id="BtnExcluir" disable="true" layoutX="697.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnDeletar" text="Excluir" />
-      <Button fx:id="BtnConfirmar" disable="true" layoutX="497.0" layoutY="438.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Confirmar" />
+      <Button fx:id="BtnConfirmar" disable="true" layoutX="497.0" layoutY="438.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="37.0" prefWidth="89.0" styleClass="btnConfirmar" text="Confirmar" />
    </children>
 </Pane>

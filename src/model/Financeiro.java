@@ -7,7 +7,7 @@ public class Financeiro {
 	private int Codigo;
 	private char Tipo;
 	private String Motivo;
-	private Date Data;
+	private java.util.Date Data;
 	private Double Valor;
 
 	public void setCodigo(int Codigo){
@@ -34,10 +34,10 @@ public class Financeiro {
 	public Double getValor(){
 		return this.Valor;
 	}
-	public void setDate(Date Date){
-		this.Data = Date;
+	public void setDate(java.util.Date date){
+		this.Data = date;
 	}
-	public Date getDate(){
+	public java.util.Date getDate(){
 		return this.Data;
 	}
 }

@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import DAO.ClienteDao;
+import DAO.QuartoDao;
 import DAO.ReservaDao;
 import view.*;
 import javafx.beans.InvalidationListener;
@@ -60,9 +62,10 @@ public class ControllerListaReservas implements Initializable{
 		try {
 			reservas = new ReservaDao().getListar();
 
+			Cliente c;
 			for(int i=0; i< reservas.size(); i++){
-				TabListaReserva t = new TabListaReserva(reservas.get(i).getCodigo(), reservas.get(i).getValor(), reservas.get(i).getCodigoCliente(), );
-
+				TabListaReserva t = new TabListaReserva(reservas.get(i).getCodigo(), reservas.get(i).getValor(), 3, new ClienteDao().getDetalhe(reservas.get(i).getCodigoCliente()).getNome(), new QuartoDao().getDetalhe(reservas.get(i).getCodigoQuarto()).getNome(), reservas.get(i).getDataEntrada().toString(), reservas.get(i).getDataSaida().toString(), "Confirmado"  );
+				itens.add(t);
 			}
 
 		} catch(SQLException e) {
@@ -70,17 +73,7 @@ public class ControllerListaReservas implements Initializable{
 			e.printStackTrace();
 		}
 
-		for(int i = 1; i < 10; i++){
-		TabListaReserva t = new TabListaReserva(i, 120, 2, "Quarto", "José da Silva", "14-11-2015", "17-11-2015", "Confirmado");
-		itens.add(t);
-		}
 		ListaReservas.setItems(itens);
-		itens.addListener(new ListChangeListener<TabListaReserva>() {
-			@Override
-			public void onChanged(javafx.collections.ListChangeListener.Change<? extends TabListaReserva> arg0) {
-				Total.setText(Integer.toString(ListaReservas.getItems().size()));
-			}
-		});
 
 	}
 
@@ -103,5 +96,11 @@ public class ControllerListaReservas implements Initializable{
 		int selectedIndex = ListaReservas.getSelectionModel().getSelectedIndex();
 		int IdSelecionado = ListaReservas.getItems().get(selectedIndex).getCodigoInt();
 		Main.initCadReserva(IdSelecionado);
+	}
+	public void confirmar(){
+		int selectedIndex = ListaReservas.getSelectionModel().getSelectedIndex();
+		int IdSelecionado = ListaReservas.getItems().get(selectedIndex).getCodigoInt();
+		Main.initChecks(IdSelecionado);
+
 	}
 }

@@ -94,9 +94,15 @@ public class ControllerCadQuarto implements Initializable{
 			QuartoDao qd = new QuartoDao();
 			if(Codigo == 0){
 				qd.setInserir(q);
+				JOptionPane.showMessageDialog(null, "Cadastrado com sucesso", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				Main.getPrimaryStage().close();
+				Main.initMain();
 			} else {
 				q.setCodigo(Codigo);
 				qd.setAlterar(q);
+				JOptionPane.showMessageDialog(null, "Cadastrado com sucesso", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				Main.getPrimaryStage().close();
+				Main.initMain();
 			}
 		}
 	}
